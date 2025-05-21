@@ -1,1 +1,0 @@
-This is the Commsource prototype package for GitHub Pages.
