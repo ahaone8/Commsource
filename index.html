@@ -1,20 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commsource</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Commsource</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .splash {
+      background-color: #4CAF50;
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .splash h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .splash p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .splash button {
+      background-color: #388E3C;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .splash button:hover {
+      background-color: #2e7d32;
+    }
+
+    .info {
+      padding: 40px 20px;
+      font-size: 18px;
+    }
+
+    #servicesSection {
+      padding: 60px 20px;
+      background-color: #f4f4f4;
+    }
+
+    #servicesSection h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    #servicesSection ul {
+      list-style: none;
+      padding: 0;
+      font-size: 18px;
+    }
+
+    #servicesSection li {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Commsource</h1>
-        <p>People helping people</p>
-    </header>
-    <main>
-        <button onclick="explore()">Explore Services</button>
-        <div id="output"></div>
-    </main>
-    <script src="script.js"></script>
+
+  <div class="splash">
+    <h1>Commsource</h1>
+    <p>People helping people</p>
+    <button id="exploreBtn">Explore Services</button>
+  </div>
+
+  <div class="info">
+    <p>Explore services like housing, food banks, peer support, and more!</p>
+  </div>
+
+  <section id="servicesSection">
+    <h2>Available Services</h2>
+    <ul>
+      <li>Housing</li>
+      <li>Food Banks</li>
+      <li>Peer Support</li>
+      <li>Community Meals</li>
+      <li>Showers & Laundry</li>
+      <li>Mental Health</li>
+      <li>Drop-In Programs</li>
+      <li>Employment Support</li>
+    </ul>
+  </section>
+
+  <script>
+    document.getElementById("exploreBtn").addEventListener("click", function () {
+      document.getElementById("servicesSection").scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
+
 </body>
 </html>
