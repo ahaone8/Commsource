@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commsource</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header, .screen {
+      display: none;
+      padding: 20px;
+      text-align: center;
+    }
+    .active {
+      display: block;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .nav {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="splash" class="screen active">
+    <h1>Commsource</h1>
+    <p>People helping people</p>
+    <a class="btn" onclick="goTo('onboarding')">Get Started</a>
+  </div>
+
+  <div id="onboarding" class="screen">
+    <h2>Welcome to Commsource</h2>
+    <p>Explore services, chat anonymously, and connect with resources.</p>
+    <a class="btn" onclick="goTo('home')">Next</a>
+  </div>
+
+  <div id="home" class="screen">
+    <h2>Service Categories</h2>
+    <a class="btn" onclick="goTo('housing')">Housing</a>
+    <a class="btn" onclick="goTo('food')">Food Bank</a>
+    <a class="btn" onclick="goTo('peer')">Peer Support</a>
+    <a class="btn" onclick="goTo('map')">View Map</a>
+    <a class="btn" onclick="goTo('login')">Organization Login</a>
+    <a class="btn" onclick="goTo('donate')">Donate</a>
+  </div>
+
+  <div id="housing" class="screen">
+    <h2>Housing Services</h2>
+    <p>List of shelters and housing options.</p>
+    <a class="btn" onclick="goTo('home')">Back</a>
+  </div>
+
+  <div id="food" class="screen">
+    <h2>Food Bank</h2>
+    <p>Find food banks near you.</p>
+    <a class="btn" onclick="goTo('home')">Back</a>
+  </div>
+
+  <div id="peer" class="screen">
+    <h2>Peer Support Chat</h2>
+    <p>Chat anonymously with trained peers.</p>
+    <a class="btn" onclick="goTo('home')">Back</a>
+  </div>
+
+  <div id="map" class="screen">
+    <h2>Service Map</h2>
+    <p>[Map Integration Placeholder]</p>
+    <a class="btn" onclick="goTo('home')">Back</a>
+  </div>
+
+  <div id="login" class="screen">
+    <h2>Organization Login</h2>
+    <p>[Login form placeholder]</p>
+    <a class="btn" onclick="goTo('home')">Back</a>
+  </div>
+
+  <div id="donate" class="screen">
+    <h2>Donate</h2>
+    <p>[Donation form or link placeholder]</p>
+    <a class="btn" onclick="goTo('home')">Back</a>
+  </div>
+
+  <script>
+    function goTo(screenId) {
+      document.querySelectorAll('.screen').forEach(div => {
+        div.classList.remove('active');
+      });
+      document.getElementById(screenId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
